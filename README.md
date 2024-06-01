@@ -5,10 +5,10 @@ This Streamlit web app provides an interactive interface for exploring and analy
 
 ## Features:
 
-Upload CSV datasets
-Preview data (head and tail)
-Check data types for each column
-Find the number of rows and columns
-Generate a heatmap to visualize missing values (with optional column selection)
-Identify and remove duplicate values (optional)
-Get an overview of the dataset with descriptive statistics
++ Upload CSV Datasets: Easily upload your data files in CSV format for exploration and analysis.
++ Preview Data: Get a quick glimpse of your data by viewing the first few rows (head) or the last few rows (tail).
++ Check Data Types: Understand the data structure by examining the data types for each column in your dataset.
++ Find Dataset Shape: Discover the dimensions of your data by determining the number of rows and columns it contains.
++ Visualize Missing Values (Heatmap): Identify and analyze missing values (null values) with an interactive heatmap. You can optionally choose specific columns focus on.
++ Handle Duplicate Values (Optional): Clean up your data by removing duplicate entries if present. You have the option to keep duplicates if needed.
++ Get Summary Statistics: Gain insights into the numerical data distribution by obtaining descriptive statistics like mean, median, standard deviation, etc.
