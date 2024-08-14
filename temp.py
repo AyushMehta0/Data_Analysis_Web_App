@@ -20,14 +20,12 @@ if upload is not None:
         if st.button("Tail"):
             st.write(data.tail())
 
-#Check datatype of each column 
 if upload is not None:
     if st.checkbox("Datatype of Each Column"):
         st.text("Datatypes")
         st.text(data.dtypes)
 
 
-#5. Find Shape of Our Dataset (Number of Rows And Number of Columns)
 if upload is not None:
     data_shape=st.radio("What Dimension Do You Want To Check?",('Rows',
                                                                 'Columns'))
@@ -44,7 +42,6 @@ import matplotlib.pyplot as plt
 if upload is not None:
     has_null_values = data.isnull().values.any()
 
-    # Display checkbox and handle user interaction
     if st.checkbox("Show Heatmap of Missing Values"):
       # Allow users to select columns (optional)
       selected_columns = st.multiselect("Select Columns", data.columns)
@@ -54,14 +51,13 @@ if upload is not None:
     
       if has_null_values:
         # Generate and display heatmap
-        fig, ax = plt.subplots()  # Using Matplotlib for more customization (optional)
+        fig, ax = plt.subplots()  
         sns.heatmap(null_heatmap_data, ax=ax)
         st.pyplot(fig)
       else:
         st.write("No missing values found!")
             
 
-#7. Find Duplicate Values in the dataset
 if upload is not None:
     test=data.duplicated().any()
     if test==True:
@@ -74,20 +70,17 @@ if upload is not None:
         if dup=="No":
             st.text("Ok No Problem")
     
-#8. Get Overall Statistics
 if upload is not None:
     if st.checkbox("Summary of The Dataset"):
         st.write(data.describe(include='all'))
 
 
-#9. About Section
 
 if st.button("About App"):
     st.text("Built With Streamlit")
     st.text("Thanks To Streamlit")
 
 
-#10. By
 if st.checkbox("By"):
     st.success("Ayush Mehta")        
     
